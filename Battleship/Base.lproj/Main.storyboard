@@ -16,14 +16,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cruise" translatesAutoresizingMaskIntoConstraints="NO" id="Wdr-0o-PmK">
-                                <rect key="frame" x="99.5" y="94" width="215" height="115"/>
+                                <rect key="frame" x="99.5" y="104" width="215" height="115"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="215" id="HGe-wu-wUH"/>
                                     <constraint firstAttribute="height" constant="115" id="QGj-wV-9YS"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BATTLESHIP" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fkC-Xy-nXd">
-                                <rect key="frame" x="92" y="217" width="230" height="55"/>
+                                <rect key="frame" x="92" y="227" width="230" height="55"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="55" id="ii5-yO-8OI"/>
                                     <constraint firstAttribute="width" constant="230" id="v0O-7T-ODX"/>
@@ -33,7 +33,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Press play button to start a new game" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8bY-If-cwh">
-                                <rect key="frame" x="96" y="357" width="222" height="41"/>
+                                <rect key="frame" x="96" y="407.5" width="222" height="41"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="41" id="UAr-8M-a36"/>
                                     <constraint firstAttribute="width" constant="222" id="gHL-uu-1fg"/>
@@ -43,19 +43,22 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TLB-gy-1x5">
-                                <rect key="frame" x="157" y="428" width="100" height="100"/>
+                                <rect key="frame" x="162" y="478.5" width="90" height="90"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="57C-3g-3vK"/>
-                                    <constraint firstAttribute="width" constant="100" id="xrD-oH-Zch"/>
+                                    <constraint firstAttribute="height" constant="90" id="57C-3g-3vK"/>
+                                    <constraint firstAttribute="width" constant="90" id="xrD-oH-Zch"/>
                                 </constraints>
                                 <state key="normal" image="playButton"/>
                                 <connections>
                                     <action selector="playGame:" destination="Zfv-Ub-OWt" eventType="touchUpInside" id="4l9-Xu-afQ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l6B-9g-kSV">
-                                <rect key="frame" x="165" y="678" width="85" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l6B-9g-kSV">
+                                <rect key="frame" x="164.5" y="752" width="85" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="85" id="4pB-50-cTW"/>
+                                    <constraint firstAttribute="height" constant="30" id="YN8-qt-xRW"/>
+                                </constraints>
                                 <state key="normal" title="Game Guide"/>
                                 <connections>
                                     <segue destination="fuz-KP-TaW" kind="presentation" id="MEA-VT-aGV"/>
@@ -64,10 +67,12 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="X6c-nN-Txw" firstAttribute="bottom" secondItem="l6B-9g-kSV" secondAttribute="bottom" constant="80" id="DUu-Uu-b7M"/>
                             <constraint firstItem="TLB-gy-1x5" firstAttribute="top" secondItem="8bY-If-cwh" secondAttribute="bottom" constant="30" id="ITn-du-7jI"/>
                             <constraint firstItem="fkC-Xy-nXd" firstAttribute="centerX" secondItem="Rmn-9Z-7xH" secondAttribute="centerX" id="PXj-se-Oqu"/>
-                            <constraint firstItem="TLB-gy-1x5" firstAttribute="centerY" secondItem="Rmn-9Z-7xH" secondAttribute="centerY" constant="30" id="Y4I-nZ-87c"/>
-                            <constraint firstItem="Wdr-0o-PmK" firstAttribute="top" secondItem="X6c-nN-Txw" secondAttribute="top" constant="50" id="gxt-oc-PBD"/>
+                            <constraint firstItem="8bY-If-cwh" firstAttribute="centerY" secondItem="Rmn-9Z-7xH" secondAttribute="centerY" constant="-20" id="Y1K-uU-0xd"/>
+                            <constraint firstItem="l6B-9g-kSV" firstAttribute="centerX" secondItem="Rmn-9Z-7xH" secondAttribute="centerX" id="aJ5-56-eh5"/>
+                            <constraint firstItem="Wdr-0o-PmK" firstAttribute="top" secondItem="X6c-nN-Txw" secondAttribute="top" constant="60" id="gxt-oc-PBD"/>
                             <constraint firstItem="8bY-If-cwh" firstAttribute="centerX" secondItem="Rmn-9Z-7xH" secondAttribute="centerX" id="rhS-D4-hv0"/>
                             <constraint firstItem="TLB-gy-1x5" firstAttribute="centerX" secondItem="Rmn-9Z-7xH" secondAttribute="centerX" id="tVz-3J-nBx"/>
                             <constraint firstItem="fkC-Xy-nXd" firstAttribute="top" secondItem="Wdr-0o-PmK" secondAttribute="bottom" constant="8" id="vDa-TE-BjA"/>

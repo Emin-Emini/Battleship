@@ -32,7 +32,7 @@ class GamePlayViewController: UIViewController {
          */
         firstPlayerIsPlaying ? loadPlayerViewSetup(model: appDelegate.player2Model) : loadPlayerViewSetup(model: appDelegate.player1Model)
         playerIndicatorLabel.text = firstPlayerIsPlaying ?
-            "Player 1's Turn" : "Player 2's Turn"
+            "Player 1's Turn" : isComputer ? "Computer's Turn" : "Player 2's Turn"
         
         
     }
