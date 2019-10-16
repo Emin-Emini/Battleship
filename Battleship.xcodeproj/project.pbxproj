@@ -7,14 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		231D286D2356264A00E695B5 /* BattleshipModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231D286C2356264A00E695B5 /* BattleshipModel.swift */; };
+		231D28712356473700E695B5 /* GamePlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231D28702356473700E695B5 /* GamePlayViewController.swift */; };
+		235A0F6D235652BF009D425B /* NextPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235A0F6C235652BF009D425B /* NextPlayerViewController.swift */; };
 		235B729A23561BF000A3B98F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235B729923561BF000A3B98F /* AppDelegate.swift */; };
 		235B729C23561BF000A3B98F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235B729B23561BF000A3B98F /* SceneDelegate.swift */; };
-		235B729E23561BF000A3B98F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235B729D23561BF000A3B98F /* ViewController.swift */; };
+		235B729E23561BF000A3B98F /* BoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235B729D23561BF000A3B98F /* BoardViewController.swift */; };
 		235B72A123561BF000A3B98F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 235B729F23561BF000A3B98F /* Main.storyboard */; };
 		235B72A323561BF400A3B98F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 235B72A223561BF400A3B98F /* Assets.xcassets */; };
 		235B72A623561BF400A3B98F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 235B72A423561BF400A3B98F /* LaunchScreen.storyboard */; };
 		235B72B123561BF400A3B98F /* BattleshipTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235B72B023561BF400A3B98F /* BattleshipTests.swift */; };
 		235B72BC23561BF400A3B98F /* BattleshipUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235B72BB23561BF400A3B98F /* BattleshipUITests.swift */; };
+		23F33BA7235746E200148113 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F33BA6235746E200148113 /* MenuViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,10 +39,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		231D286C2356264A00E695B5 /* BattleshipModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleshipModel.swift; sourceTree = "<group>"; };
+		231D28702356473700E695B5 /* GamePlayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePlayViewController.swift; sourceTree = "<group>"; };
+		235A0F6C235652BF009D425B /* NextPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextPlayerViewController.swift; sourceTree = "<group>"; };
 		235B729623561BF000A3B98F /* Battleship.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Battleship.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		235B729923561BF000A3B98F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		235B729B23561BF000A3B98F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		235B729D23561BF000A3B98F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		235B729D23561BF000A3B98F /* BoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardViewController.swift; sourceTree = "<group>"; };
 		235B72A023561BF000A3B98F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		235B72A223561BF400A3B98F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		235B72A523561BF400A3B98F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +56,7 @@
 		235B72B723561BF400A3B98F /* BattleshipUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BattleshipUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		235B72BB23561BF400A3B98F /* BattleshipUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleshipUITests.swift; sourceTree = "<group>"; };
 		235B72BD23561BF400A3B98F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		23F33BA6235746E200148113 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,7 +109,8 @@
 			children = (
 				235B729923561BF000A3B98F /* AppDelegate.swift */,
 				235B729B23561BF000A3B98F /* SceneDelegate.swift */,
-				235B729D23561BF000A3B98F /* ViewController.swift */,
+				23F33BA82357482200148113 /* Model */,
+				23F33BA92357482A00148113 /* ViewController */,
 				235B729F23561BF000A3B98F /* Main.storyboard */,
 				235B72A223561BF400A3B98F /* Assets.xcassets */,
 				235B72A423561BF400A3B98F /* LaunchScreen.storyboard */,
@@ -126,6 +135,25 @@
 				235B72BD23561BF400A3B98F /* Info.plist */,
 			);
 			path = BattleshipUITests;
+			sourceTree = "<group>";
+		};
+		23F33BA82357482200148113 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				231D286C2356264A00E695B5 /* BattleshipModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		23F33BA92357482A00148113 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				23F33BA6235746E200148113 /* MenuViewController.swift */,
+				235B729D23561BF000A3B98F /* BoardViewController.swift */,
+				231D28702356473700E695B5 /* GamePlayViewController.swift */,
+				235A0F6C235652BF009D425B /* NextPlayerViewController.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,7 +287,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				235B729E23561BF000A3B98F /* ViewController.swift in Sources */,
+				235A0F6D235652BF009D425B /* NextPlayerViewController.swift in Sources */,
+				235B729E23561BF000A3B98F /* BoardViewController.swift in Sources */,
+				231D28712356473700E695B5 /* GamePlayViewController.swift in Sources */,
+				23F33BA7235746E200148113 /* MenuViewController.swift in Sources */,
+				231D286D2356264A00E695B5 /* BattleshipModel.swift in Sources */,
 				235B729A23561BF000A3B98F /* AppDelegate.swift in Sources */,
 				235B729C23561BF000A3B98F /* SceneDelegate.swift in Sources */,
 			);
