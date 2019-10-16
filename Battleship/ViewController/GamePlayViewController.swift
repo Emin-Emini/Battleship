@@ -8,15 +8,18 @@
 
 import UIKit
 
+var isComputer: Bool = true
+
 class GamePlayViewController: UIViewController {
     
     //MARK: - Outlets
     @IBOutlet weak var playerIndicatorLabel: UILabel!
     
+    @IBOutlet weak var guideToPlayLabel: UILabel!
     
     @IBOutlet var firstCollection: [UIButton]!
     
-    //MARK: - DidLoad
+    //MARK: - DidLoad & DidAppear
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -30,10 +33,24 @@ class GamePlayViewController: UIViewController {
         firstPlayerIsPlaying ? loadPlayerViewSetup(model: appDelegate.player2Model) : loadPlayerViewSetup(model: appDelegate.player1Model)
         playerIndicatorLabel.text = firstPlayerIsPlaying ?
             "Player 1's Turn" : "Player 2's Turn"
+        
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        if !firstPlayerIsPlaying && isComputer {
+            let buttonIndex = Int.random(in: 0...119)
+            self.cellClicked(firstCollection[buttonIndex])
+        }
+        
+        guideToPlayLabel.blink(enabled: true, duration: 1, delay: 0.5, stopAfter: 5)
     }
     
 
     //MARK: - Functions
+    /* The function loadPlayerViewSetup() fills the grid from the BattleshipModel on firstCollection*/
     func loadPlayerViewSetup(model: BattleshipModel) {
         for i in 0...119{
             let state = model.cellArray[i]
@@ -76,8 +93,7 @@ class GamePlayViewController: UIViewController {
 
     }
     
-    
-    
+    /* The function youWin() shows alert of user who won, then it loads a models from beggining*/
     func youWin(){
         let player1win = UIAlertController(title: "🎉\nHurrayy!", message: "Player 1 won!", preferredStyle: UIAlertController.Style.alert);
         let player2win = UIAlertController(title: "🎉\nHurrayy!", message: "Player 2 won!", preferredStyle: UIAlertController.Style.alert);
@@ -96,13 +112,8 @@ class GamePlayViewController: UIViewController {
     }
     
     
-    //passing information thru segue
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    }
-    
-    
     //MARK: - Actions
-    @IBAction func cellClicked(_ sender: UIButton) {
+    @IBAction func cellClicked(_ sender: AnyObject) {
         
         for cell in firstCollection {
             cell.isEnabled = false;

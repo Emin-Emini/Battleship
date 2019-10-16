@@ -19,6 +19,7 @@
 		235B72B123561BF400A3B98F /* BattleshipTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235B72B023561BF400A3B98F /* BattleshipTests.swift */; };
 		235B72BC23561BF400A3B98F /* BattleshipUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235B72BB23561BF400A3B98F /* BattleshipUITests.swift */; };
 		23F33BA7235746E200148113 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F33BA6235746E200148113 /* MenuViewController.swift */; };
+		23F33BAB235792C200148113 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F33BAA235792C200148113 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		235B72BB23561BF400A3B98F /* BattleshipUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleshipUITests.swift; sourceTree = "<group>"; };
 		235B72BD23561BF400A3B98F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		23F33BA6235746E200148113 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		23F33BAA235792C200148113 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 			children = (
 				235B729923561BF000A3B98F /* AppDelegate.swift */,
 				235B729B23561BF000A3B98F /* SceneDelegate.swift */,
+				23F33BAA235792C200148113 /* Extensions.swift */,
 				23F33BA82357482200148113 /* Model */,
 				23F33BA92357482A00148113 /* ViewController */,
 				235B729F23561BF000A3B98F /* Main.storyboard */,
@@ -290,6 +293,7 @@
 				235A0F6D235652BF009D425B /* NextPlayerViewController.swift in Sources */,
 				235B729E23561BF000A3B98F /* BoardViewController.swift in Sources */,
 				231D28712356473700E695B5 /* GamePlayViewController.swift in Sources */,
+				23F33BAB235792C200148113 /* Extensions.swift in Sources */,
 				23F33BA7235746E200148113 /* MenuViewController.swift in Sources */,
 				231D286D2356264A00E695B5 /* BattleshipModel.swift in Sources */,
 				235B729A23561BF000A3B98F /* AppDelegate.swift in Sources */,

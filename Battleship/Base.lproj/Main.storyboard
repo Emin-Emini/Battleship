@@ -15,17 +15,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TLB-gy-1x5">
-                                <rect key="frame" x="157" y="428" width="100" height="100"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="57C-3g-3vK"/>
-                                    <constraint firstAttribute="width" constant="100" id="xrD-oH-Zch"/>
-                                </constraints>
-                                <state key="normal" image="playButton"/>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="modal" id="dAi-nc-bRm"/>
-                                </connections>
-                            </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cruise" translatesAutoresizingMaskIntoConstraints="NO" id="Wdr-0o-PmK">
                                 <rect key="frame" x="99.5" y="94" width="215" height="115"/>
                                 <constraints>
@@ -53,6 +42,17 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TLB-gy-1x5">
+                                <rect key="frame" x="157" y="428" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="57C-3g-3vK"/>
+                                    <constraint firstAttribute="width" constant="100" id="xrD-oH-Zch"/>
+                                </constraints>
+                                <state key="normal" image="playButton"/>
+                                <connections>
+                                    <action selector="playGame:" destination="Zfv-Ub-OWt" eventType="touchUpInside" id="4l9-Xu-afQ"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l6B-9g-kSV">
                                 <rect key="frame" x="165" y="678" width="85" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -75,6 +75,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="X6c-nN-Txw"/>
                     </view>
+                    <connections>
+                        <outlet property="gameGuideButton" destination="l6B-9g-kSV" id="jAF-2b-SCC"/>
+                        <outlet property="logoImage" destination="Wdr-0o-PmK" id="bH7-Lb-sae"/>
+                        <outlet property="logoLabel" destination="fkC-Xy-nXd" id="1Yy-uX-4dq"/>
+                        <outlet property="playButton" destination="TLB-gy-1x5" id="JOX-Rs-BeL"/>
+                        <outlet property="pressPlayButtonLabel" destination="8bY-If-cwh" id="7hu-O1-93p"/>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="playGame" id="Z0z-DU-veI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NTC-Ru-ytG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -2602,7 +2610,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <segue destination="OEO-EY-zux" kind="presentation" id="3IX-mR-FKb"/>
+                                            <segue destination="OEO-EY-zux" kind="presentation" identifier="launchMissile" id="3IX-mR-FKb"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p17-st-2ba">
@@ -4569,6 +4577,7 @@
                         <viewLayoutGuide key="safeArea" id="Qra-Rw-zfb"/>
                     </view>
                     <connections>
+                        <outlet property="guideToPlayLabel" destination="QrL-e8-AZ6" id="ogq-xE-eey"/>
                         <outlet property="playerIndicatorLabel" destination="xuv-2B-Q65" id="gCX-dw-bwJ"/>
                         <outletCollection property="firstCollection" destination="PwU-JN-I23" collectionClass="NSMutableArray" id="FF5-Oq-k7G"/>
                         <outletCollection property="firstCollection" destination="zcf-nV-gnJ" collectionClass="NSMutableArray" id="0r0-R3-GDV"/>
@@ -4730,6 +4739,12 @@
                                 <state key="normal" title="OK">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.clipToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="passToNextPlayer:" destination="tyq-sl-bdk" eventType="touchUpInside" id="Qyn-BH-Ew5"/>
                                 </connections>
@@ -4755,8 +4770,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="BSs-D8-sRS"/>
                     <connections>
+                        <outlet property="messageIcon" destination="691-Sy-enp" id="6w6-DW-rKK"/>
                         <outlet property="messageLabel" destination="iC2-o2-Xm2" id="zSh-rX-R04"/>
-                        <outlet property="okButton" destination="lRg-N6-p1H" id="2ZF-bt-OEm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x84-Hx-IVY" userLabel="First Responder" sceneMemberID="firstResponder"/>

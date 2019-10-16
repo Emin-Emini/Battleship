@@ -8,7 +8,7 @@
 
 import UIKit
 
-var firstPlayerIsPlaying: Bool = false
+var firstPlayerIsPlaying: Bool = true
 let appDelegate = UIApplication.shared.delegate as! AppDelegate
 
 class BoardViewController: UIViewController {
@@ -39,12 +39,24 @@ class BoardViewController: UIViewController {
             secondCollectionView.isHidden = true
             loadViewSetup(model: appDelegate.player1Model, collection: firstCollection)
             print("load player 1 model")
+        } else if isComputer {
+            playerIndicatorLabel.text = "Computer's Turn"
+            firstCollectionView.isHidden = true
+            secondCollectionView.isHidden = true
+            loadViewSetup(model: appDelegate.player2Model, collection: secondCollection)
+            print("load player 2 (COMP) model")
         } else {
             playerIndicatorLabel.text = "Player 2's Turn"
             firstCollectionView.isHidden = true
             secondCollectionView.isHidden = false
             loadViewSetup(model: appDelegate.player2Model, collection: secondCollection)
             print("load player 2 model")
+        }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if !firstPlayerIsPlaying && isComputer {
+            self.performSegue(withIdentifier: "launchMissile", sender: self)
         }
     }
     
@@ -96,9 +108,7 @@ class BoardViewController: UIViewController {
     }
     
     
-    
-    
-    
+    //MARK: - Actions
     @IBAction func cancelGame(_ sender: Any) {
         let cancelGameAlert = UIAlertController(title: "Cancel Game", message: "Are you sure you want to cancel the game?", preferredStyle: UIAlertController.Style.alert)
 

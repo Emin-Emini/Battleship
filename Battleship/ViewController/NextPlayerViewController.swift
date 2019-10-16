@@ -10,22 +10,28 @@ import UIKit
 
 class NextPlayerViewController: UIViewController {
 
+    //MARK: - Outlets
+    @IBOutlet weak var messageIcon: UIImageView!
     @IBOutlet weak var messageLabel: UILabel!
-    @IBOutlet weak var okButton: UIButton!
     
+    
+    //MARK: - View DidLoad & WillAppear
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         
         let message = "Hand the phone to\n"
-        
-        messageLabel.text = firstPlayerIsPlaying ? "\(message) Player 2" : "\(message) Player 1"
-        
-        okButton.clipsToBounds = true
-        okButton.layer.cornerRadius = 20
+        messageLabel.text = firstPlayerIsPlaying ? isComputer ? "Computer is next!" : "\(message) Player 2" : "\(message) Player 1"
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        messageIcon.shake()
     }
 
+    
+    //MARK: - Actions
     @IBAction func passToNextPlayer(_ sender: Any) {
         if firstPlayerIsPlaying {
             firstPlayerIsPlaying = false
